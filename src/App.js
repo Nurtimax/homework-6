@@ -1,29 +1,18 @@
 import "./App.css";
-import Block from "./components/block/Block";
-
-const blocks = [
-  {
-    id: "b1",
-    block: "yellow",
-  },
-  {
-    id: "b2",
-    block: "green",
-  },
-  {
-    id: "b3",
-    block: "color",
-  },
-  {
-    id: "b4",
-    block: `${Math.random()}`,
-  },
-];
+import Card from "./components/card/Card";
+import CardLayout from "./components/card_layout/CardLayout";
+import Title from "./components/title/Title";
+import users from "./utils/data";
 
 function App() {
   return (
     <div className="App">
-      <Block blocks={blocks} />
+      <Title />
+      <CardLayout>
+        {users.map((item) => (
+          <Card userData={item} key={item.id} />
+        ))}
+      </CardLayout>
     </div>
   );
 }

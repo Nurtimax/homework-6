@@ -4,16 +4,44 @@
   box-sizing: border-box;
 }
 
-
-
 .App {
-  width: 80%;
-  /* height: 95vh; */
-  border-radius: 20px;
-  margin: 0px auto;
-  padding: 100px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+}
+
+button:active:first-child,
+button:active:last-child {
+  border-radius: 0;
+  transform: translateY(0.5px);
+  border-radius: 3px;
+}
+button:active:first-child {
+  background-color: rgb(86, 208, 65);
+  border: 1px solid rgb(86, 208, 65);
+}
+button:active:last-child{
+  background-color: red;
+  border: 1px solid red;
+}
+button:hover {
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+}
+button {
+  display: block;
+  width: 10rem;
+  height: 2rem;
+  border: 0.1px solid;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 1s;
+  background: #f5f5f5;
+  text-transform: capitalize;
+}
+.btns {
+  display: flex;
+  gap: 10px;
 }
